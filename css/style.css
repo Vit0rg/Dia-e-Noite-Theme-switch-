@@ -1,0 +1,196 @@
+:root
+{
+  --cor-fundo: #ececec;
+  --cor-texto: #1e1e1e;
+  --cor-icone: #0c0902;
+  --cor-texto-icone: #dddddd;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body 
+{
+  height: 100%;
+  font-size: 16px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+main
+{
+  padding: 1.25em;
+  width: 100%;
+  height: 100%;
+}
+
+h2 
+{
+  text-align: center;
+  text-transform: uppercase;
+  font: 430% Helvetica, Arial, sans-serif;
+  margin: 1.5% 0 0 1.5%;
+}
+ 
+h2:after 
+{
+  content: " diurno";
+}
+
+.features 
+{
+  width: 100%;
+  margin: 0 auto 1% auto;
+}
+
+.features > p 
+{
+  vertical-align: center;
+  text-align: center;
+  margin-top: 1%;
+  min-height: 120px;
+  width: 32%;
+  margin-right: 2%;
+  float: left;
+  padding: 2% .5% .5% .5%;
+  font: Helvetica, Arial, sans-serif 120%;
+  background-color: #eaeaea;
+  border: solid 1px var(--cor-fundo);
+}
+
+p:last-child
+{
+  margin-right: 0;
+}
+
+p:hover
+{
+  background-color: #e0e0e0;
+  border: solid 1px var(--cor-texto);
+}
+
+
+ 
+.features:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.headerimage 
+{
+  height: 60%;
+  width: 100%;
+  margin: 0 auto;
+  background: url(https://picsum.photos/id/1031/900/400) no-repeat;
+  background-size: cover;
+  filter: saturate(150%) contrast(150%);
+}
+
+.headerimage:hover
+{
+  border: .1em solid var(--cor-texto);
+}
+
+label 
+{
+  display: inline-block;
+  height: 4.5%;
+  min-width: 10%;
+  background: var(--cor-icone);
+  color: var(--cor-texto-icone);
+  text-align: center;
+  font: 125% Helvetica, Arial, sans-serif;
+  margin: 5% 0 0 2%;
+  position: fixed;
+  border-radius: 38px;
+  border: 0.1em solid #b9a900;
+  opacity: 80%;
+}
+
+label:hover 
+{
+  opacity: 100%;
+  cursor: pointer;
+}
+
+input#lightswitch 
+{
+  display: none;
+}
+
+input#lightswitch:checked + main 
+{
+  --cor-fundo: #080f13;
+  --cor-texto: #dbdbdb;
+  background: var(--cor-fundo);
+}
+
+input#lightswitch:checked + main h2 {
+  color: #ffd83c;
+}
+ 
+input#lightswitch:checked + main h2:after {
+  content: " noturno"
+}
+ 
+input#lightswitch:checked + main .features > p 
+{
+  background-color: #060e13;
+  border: solid 1px var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+input#lightswitch:checked + main .features > p:hover
+{
+  background-color: #060e18;
+  border: solid 1px var(--cor-texto);
+}
+ 
+input#lightswitch:checked + main > .headerimage 
+{
+  height: 60%;
+  width: 100%;
+  background: url(https://picsum.photos/id/249/4000/2000) no-repeat;
+  background-size: cover;
+  filter: saturate(110%) contrast(100%);
+}
+
+
+@media screen and (max-width: 800px) 
+{
+ 
+  h2
+  {
+    font-size: 350%; 
+  }
+
+  .features
+  {
+    margin: 1% auto 4% auto;
+  }
+
+  p
+  {
+    text-align: left;
+    height: 30%;
+    font-size: 120%;
+  }
+
+  cite
+  {
+    margin: 10%;
+  }
+
+  .headerimage
+  {
+    max-height: 30%;
+    height: contain;
+    background-size: cover;
+    background-position: center;
+  }
+}
