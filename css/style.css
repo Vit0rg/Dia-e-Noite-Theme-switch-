@@ -163,7 +163,12 @@ input#lightswitch:checked + main > .headerimage
 
 @media screen and (max-width: 800px) 
 {
- 
+  
+  body
+  {
+    height: 120vh;
+  }
+  
   h2
   {
     font-size: 350%; 
