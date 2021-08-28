@@ -29,6 +29,7 @@ main
 
 h2 
 {
+  background-color: #e0e0e0;
   text-align: center;
   text-transform: uppercase;
   font: 430% Helvetica, Arial, sans-serif;
@@ -71,8 +72,6 @@ p:hover
   background-color: #e0e0e0;
   border: solid 1px var(--cor-texto);
 }
-
-
  
 .features:after 
 {
@@ -130,11 +129,14 @@ input#lightswitch:checked + main
   background: var(--cor-fundo);
 }
 
-input#lightswitch:checked + main h2 {
+input#lightswitch:checked + main h2 
+{
+  background-color: #09101a;
   color: #ffd83c;
 }
  
-input#lightswitch:checked + main h2:after {
+input#lightswitch:checked + main h2:after 
+{
   content: " noturno"
 }
  
@@ -160,13 +162,12 @@ input#lightswitch:checked + main > .headerimage
   filter: saturate(110%) contrast(100%);
 }
 
-
 @media screen and (max-width: 800px) 
 {
   
   body
   {
-    height: 120vh;
+    min-height: 120vh;
   }
   
   h2
