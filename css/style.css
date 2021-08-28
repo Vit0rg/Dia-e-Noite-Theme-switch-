@@ -99,13 +99,13 @@ p:hover
 label 
 {
   display: inline-block;
-  height: 4.5%;
-  min-width: 10%;
+  min-width: 11%;
   background: var(--cor-icone);
   color: var(--cor-texto-icone);
   text-align: center;
   font: 125% Helvetica, Arial, sans-serif;
   margin: 5% 0 0 2%;
+  padding: 1%;
   position: fixed;
   border-radius: 38px;
   border: 0.1em solid #b9a900;
@@ -197,5 +197,16 @@ input#lightswitch:checked + main > .headerimage
     height: contain;
     background-size: cover;
     background-position: center;
+  }
+  
+  label
+  {
+    padding: 2%;
+    opacity: 75%;
+  }
+
+  label:hover
+  {
+    opacity: 100%;
   }
 }
